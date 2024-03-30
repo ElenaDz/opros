@@ -1,0 +1,166 @@
+@mixin _for_phone {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin _for_desktop_midl {
+  @media (max-width: 1140px) {
+    @content;
+  }
+}
+
+
+.b_poll {
+  font-family: "Roboto", sans-serif;
+  max-width: 500px;
+  background-color: #2DA1B3;
+  color: white;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 15px;
+  margin: auto;
+
+  h3 {
+    text-align: center;
+  }
+
+  ul {
+    padding: 0;
+    font-size: 14px;
+
+    .option {
+      position: relative;
+      list-style: none;
+      background-color: rgba(255, 255, 255, 0.12);
+      border-radius: 5px;
+      overflow: hidden;
+      margin: 10px 0;
+
+
+      button {
+        background-color: rgba(255, 255, 255, 0.12);
+        border: none;
+        color: inherit;
+        font-size: inherit;
+        width: 100%;
+        text-align: left;
+        padding: 5px 10px;
+        outline: none;
+        cursor: pointer;
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.35);
+        }
+
+        .counter {
+          visibility: hidden;
+          opacity: 0.44;
+          margin-left: 3px;
+        }
+
+
+      }
+
+
+      .counter_meter {
+        visibility: hidden;
+        display: block;
+        position: absolute;
+        top: 0;
+        width: 0;
+        height: 100%;
+
+      }
+
+      .counter_answer {
+        right: 0;
+        top: 0;
+        height: 100%;
+        position: absolute;
+        visibility: hidden;
+        display: flex;
+        padding-right: 10px;
+        font-weight: bold;
+        font-size: 13px;
+        align-items: center;
+
+        .counter_pct {
+          visibility: hidden;
+          height: 100%;
+          display: flex;
+          padding-right: 10px;
+          font-weight: bold;
+          font-size: 13px;
+          align-items: center;
+        }
+      }
+    }
+
+
+  }
+
+  footer {
+    text-align: center;
+    font-size: 13px;
+  }
+}
+
+.show_results {
+
+  .leader {
+    .counter_meter {
+      background-color: rgba(255, 255, 255, 0.35) !important;
+    }
+  }
+
+  .u_vois {
+
+    .counter_answer {
+
+      .check_mark {
+        -webkit-mask-image: url("../img/checkmark_icon_125020.svg");
+        width: 15px;
+        height: 15px;
+        mask-repeat: no-repeat;
+        mask-size: 100%;
+        mask-position: center;
+        visibility: visible;
+        background-color: white;
+        margin-right: 10px;
+      }
+
+
+    }
+  }
+
+  ul {
+    .option {
+
+
+      .counter_meter {
+        background-color: rgba(255, 255, 255, 0.12);
+        transition-property: width;
+        transition-duration: 0.5s;
+      }
+
+      button {
+
+        &:hover {
+          background-color: unset;
+        }
+
+        &:disabled {
+          background-color: transparent;
+          cursor: unset;
+        }
+      }
+
+
+    }
+
+    .counter_meter, .counter, .counter_pct {
+      visibility: visible !important;
+    }
+  }
+}

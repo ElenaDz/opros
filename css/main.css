@@ -1,0 +1,109 @@
+.b_poll {
+  font-family: "Roboto", sans-serif;
+  max-width: 500px;
+  background-color: #2DA1B3;
+  color: white;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 15px;
+  margin: auto;
+}
+.b_poll h3 {
+  text-align: center;
+}
+.b_poll ul {
+  padding: 0;
+  font-size: 14px;
+}
+.b_poll ul .option {
+  position: relative;
+  list-style: none;
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+.b_poll ul .option button {
+  background-color: rgba(255, 255, 255, 0.12);
+  border: none;
+  color: inherit;
+  font-size: inherit;
+  width: 100%;
+  text-align: left;
+  padding: 5px 10px;
+  outline: none;
+  cursor: pointer;
+}
+.b_poll ul .option button:hover {
+  background-color: rgba(255, 255, 255, 0.35);
+}
+.b_poll ul .option button .counter {
+  visibility: hidden;
+  opacity: 0.44;
+  margin-left: 3px;
+}
+.b_poll ul .option .counter_meter {
+  visibility: hidden;
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100%;
+}
+.b_poll ul .option .counter_answer {
+  right: 0;
+  top: 0;
+  height: 100%;
+  position: absolute;
+  visibility: hidden;
+  display: flex;
+  padding-right: 10px;
+  font-weight: bold;
+  font-size: 13px;
+  align-items: center;
+}
+.b_poll ul .option .counter_answer .counter_pct {
+  visibility: hidden;
+  height: 100%;
+  display: flex;
+  padding-right: 10px;
+  font-weight: bold;
+  font-size: 13px;
+  align-items: center;
+}
+.b_poll footer {
+  text-align: center;
+  font-size: 13px;
+}
+
+.show_results .leader .counter_meter {
+  background-color: rgba(255, 255, 255, 0.35) !important;
+}
+.show_results .u_vois .counter_answer .check_mark {
+  -webkit-mask-image: url("../img/checkmark_icon_125020.svg");
+  width: 15px;
+  height: 15px;
+  mask-repeat: no-repeat;
+  mask-size: 100%;
+  mask-position: center;
+  visibility: visible;
+  background-color: white;
+  margin-right: 10px;
+}
+.show_results ul .option .counter_meter {
+  background-color: rgba(255, 255, 255, 0.12);
+  transition-property: width;
+  transition-duration: 0.5s;
+}
+.show_results ul .option button:hover {
+  background-color: unset;
+}
+.show_results ul .option button:disabled {
+  background-color: transparent;
+  cursor: unset;
+}
+.show_results ul .counter_meter, .show_results ul .counter, .show_results ul .counter_pct {
+  visibility: visible !important;
+}
+
+/*# sourceMappingURL=main.css.map */
