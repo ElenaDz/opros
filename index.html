@@ -74,7 +74,7 @@
 
         //** @link https://stackoverflow.com/questions/1230233/how-to-find-the-sum-of-an-array-of-numbers**//
         return array.reduce((a, b) => a + b, 0);
-    };
+    }
 
     //** @link https://stackoverflow.com/questions/1669190/find-the-min-max-element-of-an-array-in-javascript //
     Array.prototype.max = function () {
@@ -84,7 +84,7 @@
     function declofNum(number, titles) {
         cases = [2, 0, 1, 1, 1, 2];
         return titles[(number % 100 > 4 && number % 100 < 20) ? 2 : cases[(number % 10 < 5) ? number % 10 : 5]];
-    };
+    }
 
 
     $polls.each((index, element) => {
